@@ -1,6 +1,6 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
-const router = require("./router/index.router");
+// const router = require("./router/index.router");
 const path = require("path");
 const app = express();
 
@@ -13,12 +13,12 @@ app.engine("handlebars", exphbs.engine({
 app.set("view engine", "handlebars");
 app.set("views", path.join(__dirname, "views"));
 
-app.use(router);
-// app.get("/login",function(req, res){
+// app.use(router);
+app.get("/login",function(req, res){
     
-//       res.render('login')
+      res.render('index')
    
-//    })
+   })
 app.listen(5000, () => {
     console.log("Server is running on port 5000!");
 });
