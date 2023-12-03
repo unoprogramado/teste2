@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev": "nodemon ./src/index.js",
-    "build": "handlebars src/views/ -f dist/templates.js",
+    
     "start": "node index.js"
   }
 }
